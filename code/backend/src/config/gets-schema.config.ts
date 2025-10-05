@@ -1,0 +1,136 @@
+export const GETS_SCHEMA = {
+  version: '0.1',
+  fields: [
+    {
+      path: 'invoice.id',
+      type: 'string',
+      required: true,
+      aliases: ['inv_id', 'invoice_id', 'inv_no', 'invoice_number'],
+    },
+    {
+      path: 'invoice.issue_date',
+      type: 'date',
+      format: 'YYYY-MM-DD',
+      required: true,
+      aliases: ['date', 'issue_date', 'issued_on', 'invoice_date'],
+    },
+    {
+      path: 'invoice.currency',
+      type: 'enum',
+      enum: ['AED', 'SAR', 'MYR', 'USD'],
+      required: true,
+      aliases: ['currency', 'curr', 'invoice_currency'],
+    },
+    {
+      path: 'invoice.total_excl_vat',
+      type: 'number',
+      required: true,
+      aliases: ['total_excl_vat', 'total_net', 'totalNet', 'net_amount'],
+    },
+    {
+      path: 'invoice.vat_amount',
+      type: 'number',
+      required: true,
+      aliases: ['vat_amount', 'vat', 'tax_amount', 'tax'],
+    },
+    {
+      path: 'invoice.total_incl_vat',
+      type: 'number',
+      required: true,
+      aliases: [
+        'total_incl_vat',
+        'grand_total',
+        'grandTotal',
+        'total_amount',
+        'total',
+      ],
+    },
+    {
+      path: 'seller.name',
+      type: 'string',
+      required: true,
+      aliases: ['seller_name', 'sellerName', 'vendor_name'],
+    },
+    {
+      path: 'seller.trn',
+      type: 'string',
+      required: true,
+      aliases: ['seller_trn', 'seller_tax_id', 'sellerTax', 'vendor_trn'],
+    },
+    {
+      path: 'seller.country',
+      type: 'string',
+      pattern: '^[A-Z]{2}$',
+      required: true,
+      aliases: ['seller_country', 'sellerCountry', 'vendor_country'],
+    },
+    {
+      path: 'seller.city',
+      type: 'string',
+      required: false,
+      aliases: ['seller_city', 'sellerCity', 'vendor_city'],
+    },
+    {
+      path: 'buyer.name',
+      type: 'string',
+      required: true,
+      aliases: ['buyer_name', 'buyerName', 'customer_name'],
+    },
+    {
+      path: 'buyer.trn',
+      type: 'string',
+      required: true,
+      aliases: ['buyer_trn', 'buyer_tax_id', 'buyerTax', 'customer_trn'],
+    },
+    {
+      path: 'buyer.country',
+      type: 'string',
+      pattern: '^[A-Z]{2}$',
+      required: true,
+      aliases: ['buyer_country', 'buyerCountry', 'customer_country'],
+    },
+    {
+      path: 'buyer.city',
+      type: 'string',
+      required: false,
+      aliases: ['buyer_city', 'buyerCity', 'customer_city'],
+    },
+    {
+      path: 'lines[].sku',
+      type: 'string',
+      required: true,
+      aliases: ['sku', 'line_sku', 'lineSku', 'product_code', 'item_code'],
+    },
+    {
+      path: 'lines[].description',
+      type: 'string',
+      required: false,
+      aliases: [
+        'description',
+        'line_description',
+        'lineDescription',
+        'item_description',
+      ],
+    },
+    {
+      path: 'lines[].qty',
+      type: 'number',
+      required: true,
+      aliases: ['qty', 'quantity', 'line_qty', 'lineQty'],
+    },
+    {
+      path: 'lines[].unit_price',
+      type: 'number',
+      required: true,
+      aliases: ['unit_price', 'unitPrice', 'price', 'line_price', 'linePrice'],
+    },
+    {
+      path: 'lines[].line_total',
+      type: 'number',
+      required: true,
+      aliases: ['line_total', 'lineTotal', 'total', 'amount'],
+    },
+  ],
+};
+
+export const ALLOWED_CURRENCIES = ['AED', 'SAR', 'MYR', 'USD'];
