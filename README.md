@@ -73,8 +73,8 @@ Access Points
 Frontend: http://localhost:3001
 
 Backend: http://localhost:3000 (development)
-
-Production API: https://complyance-assignment-project.onrender.com/
+Production API for Frontend:https://complyance-assignment-project-vigneshwaran.vercel.app/
+Production API for Backend: https://complyance-assignment-project.onrender.com/
 
 Project Structure for Backend 
 src/
