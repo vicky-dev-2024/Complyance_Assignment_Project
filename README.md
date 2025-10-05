@@ -1,6 +1,4 @@
 E‑Invoicing Readiness & Gap Analyzer
-
-Readiness Analyzer Project
 A comprehensive tool for analyzing data readiness against GETS v0.1 schema compliance with automated field mapping, validation rules, and scoring system.
 
 https://img.shields.io/badge/React-18.2-blue
