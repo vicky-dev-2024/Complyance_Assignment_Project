@@ -1,6 +1,49 @@
-🚀 Tech Stack
+E‑Invoicing Readiness & Gap Analyzer
+
+Readiness Analyzer Project
+A comprehensive tool for analyzing data readiness against GETS v0.1 schema compliance with automated field mapping, validation rules, and scoring system.
+
+https://img.shields.io/badge/React-18.2-blue
+https://img.shields.io/badge/NestJS-10.0-red
+https://img.shields.io/badge/PostgreSQL-15.0-blue
+https://img.shields.io/badge/TypeScript-5.0-blue
+
+🚀 Live Demos
+Frontend: https://complyance-assignment-project-vigneshwaran.vercel.app/
+
+Backend API: https://complyance-assignment-project.onrender.com/
+
+📋 Table of Contents
+Features
+
+Tech Stack
+
+Quick Start
+
+Project Structure
+
+API Documentation
+
+Development Setup
+
+Deployment
+
+✨ Features
+Smart File Upload: Support for CSV/JSON files with automatic parsing
+
+Field Mapping: Intelligent detection and mapping to GETS v0.1 schema
+
+Validation Rules: 5 comprehensive compliance checks
+
+Scoring System: Quantitative readiness assessment
+
+Interactive Reports: Detailed analysis with visual indicators
+
+3-Step Wizard: Simplified user workflow
+
+🛠 Tech Stack
 Frontend
-React.js with TypeScript
+React 18 with TypeScript
 
 Vite for build tooling
 
@@ -13,38 +56,16 @@ Tailwind CSS for styling
 Backend
 NestJS with TypeScript
 
-TypeORM for database operations
+PostgreSQL with TypeORM
 
-PostgreSQL for data storage
-
-Class Validator for DTO validation
-
-Infrastructure
 Docker for containerization
 
-Render for backend deployment
+Jest for testing
 
-Vercel for frontend deployment
+🚀 Quick Start
+Prerequisites
+Node.js 18+
 
-📁 Project Structure
-Backend Architecture
+PostgreSQL 15+
 
-src/
-├── config/
-│   ├── database.config.ts       # TypeORM configuration
-│   └── gets-schema.config.ts    # GETS v0.1 schema definition
-├── controllers/
-│   └── analyzer.controller.ts   # API endpoints
-├── dto/
-│   ├── upload.dto.ts            # Upload request/response types
-│   ├── analyze.dto.ts           # Analyze request types
-│   └── report.dto.ts            # Report response types
-├── entities/
-│   ├── upload.entity.ts         # Upload data model
-│   └── report.entity.ts         # Report data model
-├── services/
-│   ├── upload.service.ts        # CSV/JSON parsing
-│   ├── field-mapper.service.ts  # Field detection & mapping
-│   ├── validation.service.ts    # 5 rule checks
-│   └── scoring.service.ts       # Score calculation
-└── main.ts                      # Application entry point
+Docker (optional)
